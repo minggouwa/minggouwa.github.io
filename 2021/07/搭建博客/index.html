@@ -66,7 +66,7 @@
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
       
-      <span>标签</span>
+      <span>教程</span>
     </a>
     
   </li>
@@ -77,7 +77,7 @@
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
-      <span>分类</span>
+      <span>资源</span>
     </a>
     
   </li>
@@ -168,7 +168,7 @@
 			
 			    <i class="fa-fw fas fa-tags"></i>
 			
-			标签
+			教程
 		</a>
           
         </li>
@@ -179,7 +179,7 @@
 			
 			    <i class="fa-fw fas fa-bookmark"></i>
 			
-			分类
+			资源
 		</a>
           
         </li>
@@ -504,61 +504,38 @@
   <p>因为博客的文件需要一个储存的地方，一般都是放在虚拟主机或者远程服务器中，但这里我们用Github的仓库作为储存文件的场所，所以需要注册一个Github账号并新建一个Github仓库。&nbsp;</p>
 	<ul>
 <li>这里有一个要注意的地方就是在建立仓库的时候仓库名必须是<code>用户名.github.io</code></li>
-<li>在仓库有一个index.html文件时，在浏览器中输入<code>https://用户名.github.io</code>就可以看到index.html里的内容，github pages就创建好了（这一步只是试验，不是必须操作）</li>
+<li>在仓库有一个index.html文件时，在浏览器中输入<code>https://用户名.github.io</code>就可以看到index.html里的内容，github pages就创建好了。</li>
 </ul>
 </li>
 </ol>
 <ol start="2">
-<li><h5 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h5><p>因为我们要搭建的是一个静态博客，所有要把文件都放在GitHub的仓库里，所以需要注册一个GitHub账号以及新建一个GitHub仓库，这个比较简单可以自行搜索。</p>
-<ul>
-<li>这里有一个要注意的环节就是在建立仓库的时候仓库名必须是<code>用户名.github.io</code></li>
-<li>在仓库有一个index.html文件时，在浏览器中输入<code>https://用户名.github.io</code>就可以看到index.html里的内容，github pages就创建好了（这一步只是试验，不是必须操作）</li>
-</ul>
+<li><h5 id="安装Github客户端"><a href="#安装Github客户端" class="headerlink" title="安装Github客户端"></a>安装Github客户端</h5><p>在Github官网下载安装Github客户端，用来上传我们本地写的网页代码，这部分可以用Github客户端完成，也可以用Git命令行完成，但是命令行我用了一下，实在是太过于混乱，所以最后选择了用Github客户端。</p>
 </li>
 </ol>
 <ol start="3">
-<li><h5 id="配置git用户信息"><a href="#配置git用户信息" class="headerlink" title="配置git用户信息"></a>配置git用户信息</h5><p>打开git输入</p>
-<pre><code>git config --global user.name &quot;github用户名&quot;
-git config --global user.email &quot;github邮箱&quot;</code></pre></li>
+<li><h5 id="编写网站代码"><a href="#编写网站代码" class="headerlink" title="编写网站代码"></a>编写网站代码</h5><p>打开Dreamweaver新建一个html文件命名为index.html。</p>
+<pre><code>这里你可以直接复制别人的整站代码，也可以集百家之所长，把每个网站中自己心仪的元素代码复制过来。
+<img src="../../../medias/articleimages/001.png" alt ></code></pre></li>
 </ol>
 <ol start="4">
-<li><h5 id="安装hexo静态博客框架发布到github-pages"><a href="#安装hexo静态博客框架发布到github-pages" class="headerlink" title="安装hexo静态博客框架发布到github pages"></a>安装hexo静态博客框架发布到github pages</h5><p>打开git输入</p>
-<pre><code>npm install -g hexo-cli
-hexo init 文件夹名
-cd 文件夹名
-npm install </code></pre><ul>
-<li>后续操作都在上面新建的文件夹里操作</li>
+<li><h5 id="在Dreamweaver里预览网页"><a href="#在Dreamweaver里预览网页" class="headerlink" title="在Dreamweaver里预览网页"></a>在Dreamweaver里预览网页</h5><p>所有代码复制完后在Dreamweaver里预览网页效果</p>
+<pre><code>觉得没问题了就可以进行最后一步：上传我们的网页到Github了<img src="../../../medias/articleimages/002.png" alt="" ></code></pre><ul>
 </ul>
 </li>
 </ol>
-<p>   hexo框架的本地搭建完成之后就输入命令查看效果（不是必要操作）</p>
-<pre><code>   hexo g
-   hexo s</code></pre><ol start="5">
-<li><h5 id="将本地博客发布到github-pages中"><a href="#将本地博客发布到github-pages中" class="headerlink" title="将本地博客发布到github pages中"></a>将本地博客发布到github pages中</h5><p>下载安装发布的插件</p>
-<pre><code>npm install hexo-deployer-git --save</code></pre><p>将本地目录和github关联起来</p>
-<p>生成秘钥和公钥</p>
-<pre><code>ssh-keygen -t rsa -C &quot;github邮件地址&quot;</code></pre><ul>
-<li>一直回车，在提示目录下找到.ssh文件夹， 把公钥也就是id_rsa.pub中的内容复制到github的setting里的SSH and GPG keys中添加</li>
+<ol start="5">
+<li><h5 id="将本地博客发布到github-pages中"><a href="#将本地博客发布到github-pages中" class="headerlink" title="将本地博客发布到github pages中"></a>将本地博客发布到github pages中</h5><p><b>方法一：</b></p>
+	<p>用Github客户端克隆一份仓库到本地，后续所有操作都可以在本地文件夹里进行操作。</p>
+	<p><b>方法二:</b></p>
+	<p>直接在Github网页进行上传文件操作。</p>
+	<ul>
+<li>需要说明，这里我用Github上传文件夹没法进行操作，所以这了我是先在网页中建好文件夹，再用Github进行的相关操作。</li>
 </ul>
-<p>测试链接是否成功</p>
-<pre><code>ssh -T git@github.com</code></pre></li>
+</li>
 </ol>
 <ol start="6">
-<li><h4 id="配置站点目录并发布"><a href="#配置站点目录并发布" class="headerlink" title="配置站点目录并发布"></a>配置站点目录并发布</h4><p>用编辑器打开_config.yml文件，对博客进行个性化配置</p>
-<pre><code>title: 你的博客名
-subtitle: 博客的副标题，有些主题支持
-description: 博客描述
-keywords: 博客关键词
-author: 作者，在文章中显示
-language: 博客语言语种   
-timezone: 时区</code></pre><p>在文件的最低部添加repo项和branch项，并添加如下信息</p>
-<pre><code>type: git
-repo: git@github.com:Github用户名/github用户名.github.io.git  
-//也可使用https地址，如：https://github.com/Github用户名/Github用户名.github.io.git            
-branch: maste</code></pre><p>最后就是生成页面并且发布在github pages上，（之后写文章放在/source/_posts/目录下也上下面这三条命令上传)</p>
-<pre><code>hexo clean    //清缓存
-hexo g        //渲染
-hexo d        //上传</code></pre>
+<li><h4 id="配置站点目录并发布"><a href="#配置站点目录并发布" class="headerlink" title="配置站点目录并发布"></a>配置站点目录并发布</h4>
+	<p><img src="../../../medias/articleimages/003.png" </p>
 	</li>
 </ol>
 <p>   这时候打开<code>https://用户名.github.io</code>你就可以看到你的博客已经更新了。</p>
@@ -588,20 +565,6 @@ hexo d        //上传</code></pre>
                 </span>
                 <span class="reprint-info">
                     <a href="https://www.iamys.club/2021/05/01/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">https://www.iamys.club/2021/05/01/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        版权声明:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    本博客所有文章除特別声明外，均采用
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    许可协议。转载请注明来源
-                    <a href="https://www.iamys.club" target="_blank">minggouwa</a>
-                    !
                 </span>
             </div>
         
